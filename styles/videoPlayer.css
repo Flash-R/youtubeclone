@@ -1,0 +1,91 @@
+#VideoDetails{
+    display: flex;
+    flex-direction: row;
+}
+.chanelDetals_Stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.chanelDetals_Stats .channelDetails{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.chanelDetals_Stats .channelDetails img{
+    width: 50px;
+    border-radius: 50%;
+}
+.chanelDetals_Stats .channelDetails .channelStats{
+    margin-left: 15px;
+}
+.chanelDetals_Stats .channelDetails a{
+    margin-left: 40px;
+    border-radius: 30px;
+    background-color: rgb(194, 186, 186);
+    color: black;
+    padding: 10px 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+.chanelDetals_Stats .channelDetails a:hover{
+    background-color: rgb(128, 126, 126);
+}
+.videoStats{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(161, 161, 161);
+    border-radius: 30px;
+}
+.videoStats img{
+    width: 30px;
+    height: 30px;
+    padding: 1px 10px;
+}
+.videoStats span{
+  margin-right: 10px;
+    color: white;
+}
+.videoStats img:last-child{
+    border-left: 1px solid;
+    padding-left: 10px;
+}
+
+.description{
+    background-color: rgb(138, 138, 138);
+    padding: 10px;
+    border-radius: 15px;
+}
+.description p:first-child{
+    font-weight: 600;
+}
+
+
+/* Comments */
+.comments{
+    margin-top: 10px;
+}
+
+.individualComments{
+    display: flex;
+    flex-direction: row;
+    
+}
+.individualComments > img{
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%;
+}
+.individualComments .commentDetail{
+    margin-left: 20px;
+}
+.individualComments .commentDetail p{
+    margin: 10px 0px;
+}
+.individualComments .commentDetail .videoStats{
+    background-color: white;
+}
