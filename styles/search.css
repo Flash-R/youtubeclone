@@ -1,0 +1,33 @@
+.singleSearchOutput_row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.searchThumnail a > img{
+    width: 350px;
+    border-radius: 20px;
+}
+.SingleSearchDetails{
+    margin-left: 20px;
+}
+.SingleSearchDetails h2{
+    margin: 0px;
+    margin-bottom: 5px;
+    /* padding: 0px; */
+}
+.SingleSearchDetails .channelDetails{
+   display: flex;
+   flex-direction: row;
+   margin-top: 25px;
+   align-items: center;
+}
+.SingleSearchDetails .channelDetails img{
+    width: 50px;
+    border-radius: 50%;
+}
+.SingleSearchDetails .channelDetails p{
+    margin-left: 10px;
+}
+.SingleSearchDetails .videoDescription{
+    margin-top: 20px;
+}

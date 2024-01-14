@@ -33,3 +33,31 @@
         </div>
     </div>
 </div>
+
+
+<div class= 'thumbnail-row' >
+    <a href='https://www.youtube.com/watch?v=${itemDetails.videoId}' target='_blank' class='video-title-link'>
+        <img class='thumbnail' src='${itemDetails.thumbnailUrl}'>
+    </a>
+    <div class='video-time'>${itemDetails.videoDuration}</div>
+</div >
+<div class='video-info-grid'>
+    <div class='channel-picture'>
+        <div class='profile-picture-container'>
+            <a href='https://www.youtube.com/c/${itemDetails.channelId}' target='_blank' class='channel-link'>
+                <img class='profile-picture' src='${itemDetails.channelLogoUrl}'>
+            </a>
+        </div>
+    </div>
+    <div class='video-info'>
+        <a href='https://www.youtube.com/watch?v=${itemDetails.videoId}' target='_blank' class='video-title-link'>
+            <p class='video-title'>${itemDetails.videoTitle}</p>
+        </a>
+        <div class='tooltip-hover'>
+            <a href='https://www.youtube.com/c/mkbhd' target='_blank' class='channel-link'>
+                <p class='video-author'>${itemDetails.channelTitle}</p>
+            </a>
+            <p class='video-stats'>${itemDetails.videoViewCount} views &#183; ${itemDetails.videoDuration} ago</p>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,8 @@
 const API_KEY = "AIzaSyA30_P0lt18q6mKdI3q4gwC9bqMA1q29uk"
 const BASE_URL = "https://www.googleapis.com/youtube/v3"
 
+const searchBtn = document.getElementById("searchBtn");
+const searchText = document.getElementById("searchText");
 // fetch search queries
 async function fetchSearchResults(searchQuery){
     let response, responseData;
@@ -127,7 +129,7 @@ async function renderContent(itemDetails){
                         <a href='https://www.youtube.com/c/mkbhd' target='_blank' class='channel-link'>
                             <p class='video-author'>${itemDetails.channelTitle}</p>
                         </a>
-                        <p class='video-stats'>${itemDetails.videoViewCount} views &#183; ${itemDetails.videoDuration} ago</p>
+                        <p class='video-stats'>${itemDetails.videoViewCount} views &#183; ${itemDetails.sincePublishDate}</p>
                     </div>
                 </div>
             </div>
@@ -135,7 +137,7 @@ async function renderContent(itemDetails){
 
          const videosContainer = document.querySelector(".video-grid");
 
-         console.log(video_preview);
+        //  console.log(video_preview);
          videosContainer.appendChild(video_preview)
 }
 
@@ -237,15 +239,37 @@ async function renderSearchResults(searchQuery) {
 
     // ADD ALL THE VIDEO OBJECTS TO AN ARRAY, THEN TO LOCAL_STORAGE, RENDER FROM THE RESOLVED ARRAY
     Promise.all(itemPromiseArr).then((resolvedArray) => {
-        localStorage.setItem(
-            "renderableVideoProperties",
-            JSON.stringify(resolvedArray)
-        );
+        // localStorage.setItem(
+        //     "renderableVideoProperties",
+        //     JSON.stringify(resolvedArray)
+        // );
 
         resolvedArray.forEach((renderable_videoDetailsObject)=> {
             renderContent(renderable_videoDetailsObject);
         })
     });
 }
-
 renderSearchResults()
+// When the search button 
+searchBtn.addEventListener("click", function(){
+    const searchValue = searchText.value;
+    console.log(searchValue);
+    if(searchValue == " " || searchValue == null){
+        alert("Please Put a value to search")
+        window.location.href = `./`;
+    }else{
+        window.location.href = `./search.html?q=${searchValue}`;
+    }
+})
+
+export {
+    API_KEY,
+    BASE_URL,
+    fetchSearchResults, 
+    getVideoStatsByID,
+    getChannelInfo,
+    updateSearchItemProperties,
+    shortenNumber,
+    shortenTimeDifference,
+    renderSearchResults
+}
