@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyA30_P0lt18q6mKdI3q4gwC9bqMA1q29uk"
+const API_KEY = "AIzaSyDrpfaUep93bgJsBIwN3aM23NoNMsSFJfc"
 const BASE_URL = "https://www.googleapis.com/youtube/v3"
 
 const searchBtn = document.getElementById("searchBtn");
@@ -45,7 +45,8 @@ async function getVideoStatsByID(videoId){
     
     return {
         statistics: data.items[0].statistics,
-        VideoContent: data.items[0].contentDetails
+        VideoContent: data.items[0].contentDetails,
+        snippet: data.items[0].snippet
     };
 }
 // getting channel logo
@@ -108,7 +109,7 @@ async function renderContent(itemDetails){
         video_preview.setAttribute("class", "video-preview");
         video_preview.innerHTML = `
             <div class= 'thumbnail-row' >
-                <a href='https://www.youtube.com/watch?v=${itemDetails.videoId}' target='_blank' class='video-title-link'>
+                <a href='./video_player.html?id=${itemDetails.videoId}' target='_blank' class='video-title-link'>
                     <img class='thumbnail' src='${itemDetails.thumbnailUrl}'>
                 </a>
                 <div class='video-time'>${itemDetails.videoDuration}</div>
@@ -122,7 +123,7 @@ async function renderContent(itemDetails){
                     </div>
                 </div>
                 <div class='video-info'>
-                    <a href='https://www.youtube.com/watch?v=${itemDetails.videoId}' target='_blank' class='video-title-link'>
+                    <a href='./video_player.html?id=${itemDetails.videoId}' target='_blank' class='video-title-link'>
                         <p class='video-title'>${itemDetails.videoTitle}</p>
                     </a>
                     <div class='tooltip-hover'>

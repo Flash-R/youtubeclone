@@ -16,7 +16,6 @@ const urlParams = new URLSearchParams(url);
 
 const searchValue = urlParams.get('q');
 
-console.log(searchValue);
 // displaying on the search 
 async function renderContent(itemDetails){
         
