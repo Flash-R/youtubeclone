@@ -10,7 +10,7 @@ async function fetchSearchResults(searchQuery){
         if(searchQuery == null || searchQuery == undefined){
             response = await fetch(`${BASE_URL}/search?key=${API_KEY}&maxResults=8&part=snippet&type=video`);
         }else{
-            response = await fetch(`${BASE_URL}/search?key=${API_KEY}&maxResults=3&part=snippet&q=${searchQuery}&type=video`);
+            response = await fetch(`${BASE_URL}/search?key=${API_KEY}&maxResults=10&part=snippet&q=${searchQuery}&type=video`);
         }
         if(response.ok){
             responseData = await response.json();
