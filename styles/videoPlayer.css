@@ -80,25 +80,29 @@ body {
     margin-top: 10px;
 }
 
-.individualComments{
+.individualComment{
     display: flex;
     flex-direction: row;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     
 }
-.individualComments > img{
+.individualComment > img{
     width: 50px;
     height: 50px; 
     border-radius: 50%;
 }
-.individualComments .commentDetail{
+.individualComment .commentDetail{
     margin-left: 20px;
 }
-.individualComments .commentDetail p{
+.individualComment .commentDetail p{
     margin: 10px 0px;
 }
-.individualComments .commentDetail .videoStats{
-    background-color: white;
+.individualComment .commentDetail .videoStats{
+    background-color: transparent;
+}
+.individualComment .commentDetail .videoStats img{
+    width: 20px !important;
+    height: 20px !important;
 }
 
 /* related Videos */
