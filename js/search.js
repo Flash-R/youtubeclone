@@ -29,7 +29,9 @@ async function renderContent(itemDetails){
             </a>
         </div>
         <div class="SingleSearchDetails">
-            <h2 class="title">${itemDetails.videoTitle}</h3>
+            <a href="./video_player.html?id=${itemDetails.videoId}">
+                <h2 class="title">${itemDetails.videoTitle}</h3>
+            </a>
             <p>${itemDetails.videoViewCount} views. ${itemDetails.sincePublishDate}</p>
             <div class="channelDetails">
                 <img src="${itemDetails.channelLogoUrl}" alt="${itemDetails.channelTitle}" class="channelImage">
